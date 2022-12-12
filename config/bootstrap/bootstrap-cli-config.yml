@@ -85,7 +85,7 @@ bootstrap:
                 idp-source-id: 2c0a801e-a32f-496e-be22-fe0f84f1c54d
                 idp-source-name: bootcamp-03-prod-all-read
               - cdf-group: cdf:uc:001:oee:owner
-                id-source-id: 4884003c-ca84-4acd-8103-a641fb74b028
+                idp-source-id: 4884003c-ca84-4acd-8103-a641fb74b028
                 idp-source-name: bootcamp-03-prod-uc-001-oee-owner
               - cdf-group: cdf:uc:001:oee:read
                 idp-source-id: 48c5014f-b573-4c6f-a1c3-f858e64db7c7
