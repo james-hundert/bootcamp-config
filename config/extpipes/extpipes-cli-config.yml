@@ -26,26 +26,42 @@ extpipe-pattern: '{source}:{short-name}:{rawtable-name}:{suffix}'
 
 # can contain multiple contacts, can be overwritten on pipeline level
 default-contacts:
-    - name: [Contact name]
-      email: [Contact email]
-      role: [Role name]
+    - name: Hector Escalona
+      email: hgonzalez9@slb.com
+      role: Data Manager
       send-notification: true
 
 rawdbs:
   # list of raw-dbs > containing rawtables > containing pipelines
-    - rawdb-name: [Node name]:db
-      dataset-external-id: [Node name]:ds
-      short-name: [Short name for raw DB]
+    - rawdb-name: src:001:sap:db
+      dataset-external-id: src:001:sap:ds
+      short-name: SAP
       rawtables:
-          - rawtable-name: [table name]
+          - rawtable-name: assets
             pipelines:
         # source is a short-name identifying the pipeline source being
         # a 'db-extractor (db)', an 'Azure Function (az-func)',
         # or 'Azure Data Factory (adf)', 'Python script (py)', ..
-                - source: [Source type]
+                - source: csv
                   schedule: On trigger
                   contacts:
-                      - name: [Contact name]
-                        email: [Contact e-mail]
-                        role: [Contact role]
+                      - name: Hector Escalona
+                        email: hgonzalez9@slb.com
+                        role: Bootcamp 03 Administrator
+                        send-notification: false
+    - rawdb-name: src:002:opcua:db
+      dataset-external-id: src:002:opcua:ds
+      short-name: OPCUA
+      rawtables:
+          - rawtable-name: timeseries
+            pipelines:
+        # source is a short-name identifying the pipeline source being
+        # a 'db-extractor (db)', an 'Azure Function (az-func)',
+        # or 'Azure Data Factory (adf)', 'Python script (py)', ..
+                - source: ice-cream-api
+                  schedule: On trigger
+                  contacts:
+                      - name: Hector Escalona
+                        email: hgonzalez9@slb.com
+                        role: Bootcamp 03 Administrator
                         send-notification: false
